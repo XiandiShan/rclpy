@@ -1,10 +1,10 @@
-# rclpy
+# rclpy_debug
 ROS Client Library for the Python language.
 
 
 ## Building documentation
 
-Documentation can be built for `rclpy` using [Sphinx](http://www.sphinx-doc.org/en/master/), or accessed [online](http://docs.ros2.org/latest/api/rclpy/index.html)
+Documentation can be built for `rclpy_debug` using [Sphinx](http://www.sphinx-doc.org/en/master/), or accessed [online](http://docs.ros2.org/latest/api/rclpy_debug/index.html)
 
 For building documentation, you need an installation of ROS 2.
 
@@ -23,12 +23,12 @@ Build code:
 
     mkdir -p rclpy_ws/src
     cd rclpy_ws/src
-    git clone https://github.com/ros2/rclpy.git
+    git clone https://github.com/ros2/rclpy_debug.git
     cd ..
     colcon build --symlink-install
 
 Source workspace and build docs:
 
     source install/setup.bash
-    cd src/rclpy/rclpy/docs
+    cd src/rclpy_debug/rclpy_debug/docs
     make html

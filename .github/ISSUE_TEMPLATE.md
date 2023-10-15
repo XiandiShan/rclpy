@@ -18,7 +18,7 @@ For Bug report or feature requests, please fill out the relevant category below
 - DDS implementation:
   - <!-- rmw_implementation used (e.g. Fast-RTPS, RTI Connext, etc -->
 - Client library (if applicable):
-  - <!-- e.g. rclcpp, rclpy, or N/A -->
+  - <!-- e.g. rclcpp, rclpy_debug, or N/A -->
 
 #### Steps to reproduce issue
 <!-- Detailed instructions on how to reliably reproduce this issue http://sscce.org/
