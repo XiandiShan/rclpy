@@ -51,6 +51,8 @@ from rclpy.utilities import timeout_sec_to_nsec
 from rclpy.waitable import NumberOfEntities
 from rclpy.waitable import Waitable
 
+from sample_node.time_profiler import TimeProfiler
+
 # For documentation purposes
 # TODO(jacobperron): Make all entities implement the 'Waitable' interface for better type checking
 WaitableEntityType = TypeVar('WaitableEntityType')
@@ -58,7 +60,6 @@ WaitableEntityType = TypeVar('WaitableEntityType')
 # Avoid import cycle
 if TYPE_CHECKING:
     from rclpy.node import Node  # noqa: F401
-
 
 class _WorkTracker:
     """Track the amount of work that is in progress."""
@@ -132,6 +133,8 @@ class ConditionReachedException(Exception):
 
 
 class Executor:
+    time_profiler = TimeProfiler()
+
     """
     The base class for an executor.
 
@@ -670,6 +673,7 @@ class Executor:
         if condition():
             raise ConditionReachedException()
 
+    @time_profiler.measure_execution_time(field="wait_for_ready_callbacks")
     def wait_for_ready_callbacks(self, *args, **kwargs) -> Tuple[Task, WaitableEntityType, 'Node']:
         """
         Return callbacks that are ready to be executed.
@@ -725,6 +729,7 @@ class MultiThreadedExecutor(Executor):
         defaults to 1.
     :param context: The context associated with the executor.
     """
+    time_profiler = TimeProfiler()
 
     def __init__(self, num_threads: int = None, *, context: Context = None) -> None:
         super().__init__(context=context)
@@ -736,6 +741,7 @@ class MultiThreadedExecutor(Executor):
         self._futures = []
         self._executor = ThreadPoolExecutor(num_threads)
 
+    @time_profiler.measure_execution_time(field="spin_once")
     def _spin_once_impl(
         self,
         timeout_sec: float = None,
@@ -755,6 +761,7 @@ class MultiThreadedExecutor(Executor):
         else:
             self._executor.submit(handler)
             self._futures.append(handler)
+            self.time_profiler.record("future_length", len(self._futures))
             for future in self._futures:  # check for any exceptions
                 if future.done():
                     self._futures.remove(future)

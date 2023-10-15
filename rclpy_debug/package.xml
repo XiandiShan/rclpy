@@ -32,6 +32,7 @@
   <depend>rmw_implementation</depend>
   <depend>rosidl_runtime_c</depend>
   <depend>unique_identifier_msgs</depend>
+  <depend>sample_node</depend>
 
   <exec_depend>ament_index_python</exec_depend>
   <exec_depend>builtin_interfaces</exec_depend>
