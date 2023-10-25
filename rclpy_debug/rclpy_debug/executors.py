@@ -769,8 +769,7 @@ class MultiThreadedExecutor(Executor):
         else:
             self._executor.submit(handler)
             self._futures.append(handler)
-            # for future in self._futures:  # check for any exceptions
-            for future in self._futures[:]:
+            for future in self._futures:  # check for any exceptions
                 if future.done():
                     self._futures.remove(future)
                     future.result()
