@@ -14,9 +14,9 @@
 
 import unittest
 
-from rclpy.exceptions import InvalidServiceNameException
-from rclpy.exceptions import InvalidTopicNameException
-from rclpy.validate_full_topic_name import validate_full_topic_name
+from rclpy_debug.exceptions import InvalidServiceNameException
+from rclpy_debug.exceptions import InvalidTopicNameException
+from rclpy_debug.validate_full_topic_name import validate_full_topic_name
 
 
 class TestValidateFullTopicName(unittest.TestCase):

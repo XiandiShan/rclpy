@@ -14,8 +14,8 @@
 
 import unittest
 
-from rclpy.constants import S_TO_NS
-import rclpy.utilities
+from rclpy_debug.constants import S_TO_NS
+import rclpy_debug.utilities
 
 
 class TestValidateRemoveRosArgs(unittest.TestCase):

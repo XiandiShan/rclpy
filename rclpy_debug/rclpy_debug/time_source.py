@@ -15,12 +15,12 @@
 import weakref
 
 from rcl_interfaces.msg import SetParametersResult
-from rclpy.clock import ClockType
-from rclpy.clock import ROSClock
-from rclpy.parameter import Parameter
-from rclpy.qos import QoSProfile
-from rclpy.qos import ReliabilityPolicy
-from rclpy.time import Time
+from rclpy_debug.clock import ClockType
+from rclpy_debug.clock import ROSClock
+from rclpy_debug.parameter import Parameter
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.qos import ReliabilityPolicy
+from rclpy_debug.time import Time
 import rosgraph_msgs.msg
 
 CLOCK_TOPIC = '/clock'
@@ -71,7 +71,7 @@ class TimeSource:
                 )
 
     def attach_node(self, node):
-        from rclpy.node import Node
+        from rclpy_debug.node import Node
         if not isinstance(node, Node):
             raise TypeError('Node must be of type rclpy_debug.node.Node')
         # Remove an existing node.

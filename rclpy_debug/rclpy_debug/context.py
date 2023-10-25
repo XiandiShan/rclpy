@@ -57,7 +57,7 @@ class Context:
         :param args: List of command line arguments.
         """
         # imported locally to avoid loading extensions on module import
-        from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+        from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
         global g_logging_ref_count
         with self._lock:
@@ -131,7 +131,7 @@ class Context:
 
     def _logging_fini(self):
         # This function must be called with self._lock held.
-        from rclpy.impl.implementation_singleton import rclpy_implementation
+        from rclpy_debug.impl.implementation_singleton import rclpy_implementation
         global g_logging_ref_count
         if self._logging_initialized:
             with g_logging_configure_lock:

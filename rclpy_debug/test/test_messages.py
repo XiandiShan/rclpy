@@ -16,7 +16,7 @@ import unittest
 
 import rclpy_debug
 
-from rclpy.serialization import serialize_message
+from rclpy_debug.serialization import serialize_message
 from test_msgs.msg import BasicTypes, Strings
 
 

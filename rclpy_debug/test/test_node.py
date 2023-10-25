@@ -29,27 +29,27 @@ from rcl_interfaces.msg import ParameterValue
 from rcl_interfaces.msg import SetParametersResult
 from rcl_interfaces.srv import GetParameters
 import rclpy_debug
-from rclpy.clock import ClockType
-from rclpy.duration import Duration
-from rclpy.exceptions import InvalidParameterException
-from rclpy.exceptions import InvalidParameterTypeException
-from rclpy.exceptions import InvalidParameterValueException
-from rclpy.exceptions import InvalidServiceNameException
-from rclpy.exceptions import InvalidTopicNameException
-from rclpy.exceptions import ParameterAlreadyDeclaredException
-from rclpy.exceptions import ParameterImmutableException
-from rclpy.exceptions import ParameterNotDeclaredException
-from rclpy.exceptions import ParameterUninitializedException
-from rclpy.executors import SingleThreadedExecutor
-from rclpy.parameter import Parameter
-from rclpy.qos import qos_profile_sensor_data
-from rclpy.qos import QoSDurabilityPolicy
-from rclpy.qos import QoSHistoryPolicy
-from rclpy.qos import QoSLivelinessPolicy
-from rclpy.qos import QoSProfile
-from rclpy.qos import QoSReliabilityPolicy
-from rclpy.time_source import USE_SIM_TIME_NAME
-from rclpy.utilities import get_rmw_implementation_identifier
+from rclpy_debug.clock import ClockType
+from rclpy_debug.duration import Duration
+from rclpy_debug.exceptions import InvalidParameterException
+from rclpy_debug.exceptions import InvalidParameterTypeException
+from rclpy_debug.exceptions import InvalidParameterValueException
+from rclpy_debug.exceptions import InvalidServiceNameException
+from rclpy_debug.exceptions import InvalidTopicNameException
+from rclpy_debug.exceptions import ParameterAlreadyDeclaredException
+from rclpy_debug.exceptions import ParameterImmutableException
+from rclpy_debug.exceptions import ParameterNotDeclaredException
+from rclpy_debug.exceptions import ParameterUninitializedException
+from rclpy_debug.executors import SingleThreadedExecutor
+from rclpy_debug.parameter import Parameter
+from rclpy_debug.qos import qos_profile_sensor_data
+from rclpy_debug.qos import QoSDurabilityPolicy
+from rclpy_debug.qos import QoSHistoryPolicy
+from rclpy_debug.qos import QoSLivelinessPolicy
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.qos import QoSReliabilityPolicy
+from rclpy_debug.time_source import USE_SIM_TIME_NAME
+from rclpy_debug.utilities import get_rmw_implementation_identifier
 from test_msgs.msg import BasicTypes
 
 TEST_NODE = 'my_node'
@@ -1936,7 +1936,7 @@ class TestCreateNode(unittest.TestCase):
         context = rclpy_debug.context.Context()
         rclpy_debug.init(context=context)
 
-        from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+        from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
         invalid_ros_args_error_pattern = r'Failed to parse ROS arguments:.*not-a-remap.*'
         with self.assertRaisesRegex(_rclpy.RCLInvalidROSArgsError, invalid_ros_args_error_pattern):

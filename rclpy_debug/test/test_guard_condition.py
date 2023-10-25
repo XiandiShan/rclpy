@@ -15,7 +15,7 @@
 import unittest
 
 import rclpy_debug
-from rclpy.executors import SingleThreadedExecutor
+from rclpy_debug.executors import SingleThreadedExecutor
 
 
 class TestGuardCondition(unittest.TestCase):

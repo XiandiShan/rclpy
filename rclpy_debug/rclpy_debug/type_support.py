@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.exceptions import NoTypeSupportImportedException
+from rclpy_debug.exceptions import NoTypeSupportImportedException
 
 
 def check_for_type_support(msg_or_srv_type):

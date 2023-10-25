@@ -18,8 +18,8 @@ import time
 
 import pytest
 import rclpy_debug
-from rclpy.constants import S_TO_NS
-from rclpy.executors import SingleThreadedExecutor
+from rclpy_debug.constants import S_TO_NS
+from rclpy_debug.executors import SingleThreadedExecutor
 
 
 TEST_PERIODS = (

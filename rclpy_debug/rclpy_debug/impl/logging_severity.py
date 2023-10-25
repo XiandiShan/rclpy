@@ -15,7 +15,7 @@
 
 from enum import IntEnum
 
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 class LoggingSeverity(IntEnum):

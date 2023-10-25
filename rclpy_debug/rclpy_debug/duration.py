@@ -13,8 +13,8 @@
 # limitations under the License.
 
 import builtin_interfaces.msg
-from rclpy.constants import S_TO_NS
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.constants import S_TO_NS
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 class Duration:

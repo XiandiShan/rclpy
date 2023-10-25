@@ -18,8 +18,8 @@ import threading
 
 import ament_index_python
 
-from rclpy.constants import S_TO_NS
-from rclpy.context import Context
+from rclpy_debug.constants import S_TO_NS
+from rclpy_debug.context import Context
 
 g_default_context = None
 g_context_lock = threading.Lock()
@@ -41,7 +41,7 @@ def get_default_context(*, shutting_down=False):
 
 def remove_ros_args(args=None):
     # imported locally to avoid loading extensions on module import
-    from rclpy.impl.implementation_singleton import rclpy_implementation
+    from rclpy_debug.impl.implementation_singleton import rclpy_implementation
     return rclpy_implementation.rclpy_remove_ros_args(
         args if args is not None else sys.argv)
 
@@ -77,7 +77,7 @@ def try_shutdown(*, context=None):
 
 def get_rmw_implementation_identifier():
     # imported locally to avoid loading extensions on module import
-    from rclpy.impl.implementation_singleton import rclpy_implementation
+    from rclpy_debug.impl.implementation_singleton import rclpy_implementation
     return rclpy_implementation.rclpy_get_rmw_implementation_identifier()
 
 

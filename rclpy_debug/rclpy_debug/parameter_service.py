@@ -17,10 +17,10 @@ import weakref
 from rcl_interfaces.msg import SetParametersResult
 from rcl_interfaces.srv import DescribeParameters, GetParameters, GetParameterTypes
 from rcl_interfaces.srv import ListParameters, SetParameters, SetParametersAtomically
-from rclpy.exceptions import ParameterNotDeclaredException, ParameterUninitializedException
-from rclpy.parameter import Parameter, PARAMETER_SEPARATOR_STRING
-from rclpy.qos import qos_profile_parameters
-from rclpy.validate_topic_name import TOPIC_SEPARATOR_STRING
+from rclpy_debug.exceptions import ParameterNotDeclaredException, ParameterUninitializedException
+from rclpy_debug.parameter import Parameter, PARAMETER_SEPARATOR_STRING
+from rclpy_debug.qos import qos_profile_parameters
+from rclpy_debug.validate_topic_name import TOPIC_SEPARATOR_STRING
 
 
 class ParameterService:

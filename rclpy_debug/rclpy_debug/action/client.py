@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import objgraph
+
 import threading
 import time
 import uuid
@@ -20,16 +22,17 @@ import weakref
 from action_msgs.msg import GoalStatus
 from action_msgs.srv import CancelGoal
 
-from rclpy.executors import await_or_execute
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.qos import qos_profile_action_status_default
-from rclpy.qos import qos_profile_services_default
-from rclpy.qos import QoSProfile
-from rclpy.task import Future
-from rclpy.type_support import check_for_type_support
-from rclpy.waitable import NumberOfEntities, Waitable
+from rclpy_debug.executors import await_or_execute
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.qos import qos_profile_action_status_default
+from rclpy_debug.qos import qos_profile_services_default
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.task import Future
+from rclpy_debug.type_support import check_for_type_support
+from rclpy_debug.waitable import NumberOfEntities, Waitable
 
 from unique_identifier_msgs.msg import UUID
+import objgraph
 
 
 class ClientGoalHandle():
@@ -283,6 +286,7 @@ class ActionClient(Waitable):
         This will set results for Future objects for any received service responses and
         call any user-defined callbacks (e.g. feedback).
         """
+        
         if 'goal' in taken_data:
             sequence_number, goal_response = taken_data['goal']
             if sequence_number in self._goal_sequence_number_to_goal_id:
@@ -299,6 +303,7 @@ class ActionClient(Waitable):
                     self._goal_handles[goal_uuid] = weakref.ref(goal_handle)
 
                 self._pending_goal_requests[sequence_number].set_result(goal_handle)
+
             else:
                 self._node.get_logger().warning(
                     'Ignoring unexpected goal response. There may be more than '
@@ -452,7 +457,6 @@ class ActionClient(Waitable):
         future.add_done_callback(self._remove_pending_goal_request)
         # Add future so executor is aware
         self.add_future(future)
-
         return future
 
     def _cancel_goal(self, goal_handle):

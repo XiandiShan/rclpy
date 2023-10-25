@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 class NotInitializedException(Exception):
@@ -104,7 +104,7 @@ class InvalidParameterTypeException(ParameterException):
     """Raised when a parameter is rejected for having an invalid type."""
 
     def __init__(self, desired_parameter, expected_type, *args):
-        from rclpy.parameter import Parameter
+        from rclpy_debug.parameter import Parameter
         Exception.__init__(
             self,
             f"Trying to set parameter '{desired_parameter._name}' to '{desired_parameter._value}'"

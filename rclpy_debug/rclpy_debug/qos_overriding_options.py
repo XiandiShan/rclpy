@@ -24,16 +24,16 @@ from rcl_interfaces.msg import ParameterDescriptor
 from rcl_interfaces.msg import SetParametersResult
 
 import rclpy_debug
-from rclpy.duration import Duration
-from rclpy.exceptions import ParameterAlreadyDeclaredException
-from rclpy.parameter import Parameter
-from rclpy.publisher import Publisher
-from rclpy.qos import QoSPolicyKind
-from rclpy.qos import QoSProfile
-from rclpy.subscription import Subscription
+from rclpy_debug.duration import Duration
+from rclpy_debug.exceptions import ParameterAlreadyDeclaredException
+from rclpy_debug.parameter import Parameter
+from rclpy_debug.publisher import Publisher
+from rclpy_debug.qos import QoSPolicyKind
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.subscription import Subscription
 
 if TYPE_CHECKING:
-    from rclpy.node import Node
+    from rclpy_debug.node import Node
 
 
 class InvalidQosOverridesError(Exception):

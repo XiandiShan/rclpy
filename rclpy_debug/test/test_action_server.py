@@ -20,9 +20,9 @@ from action_msgs.msg import GoalStatus
 from action_msgs.srv import CancelGoal
 
 import rclpy_debug
-from rclpy.action import ActionServer, CancelResponse, GoalResponse
-from rclpy.callback_groups import ReentrantCallbackGroup
-from rclpy.executors import MultiThreadedExecutor, SingleThreadedExecutor
+from rclpy_debug.action import ActionServer, CancelResponse, GoalResponse
+from rclpy_debug.callback_groups import ReentrantCallbackGroup
+from rclpy_debug.executors import MultiThreadedExecutor, SingleThreadedExecutor
 
 from test_msgs.action import Fibonacci
 

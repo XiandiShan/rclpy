@@ -16,11 +16,11 @@ import time
 import unittest
 
 import rclpy_debug
-from rclpy.action import ActionClient
-from rclpy.action import ActionServer
-from rclpy.action import get_action_client_names_and_types_by_node
-from rclpy.action import get_action_names_and_types
-from rclpy.action import get_action_server_names_and_types_by_node
+from rclpy_debug.action import ActionClient
+from rclpy_debug.action import ActionServer
+from rclpy_debug.action import get_action_client_names_and_types_by_node
+from rclpy_debug.action import get_action_names_and_types
+from rclpy_debug.action import get_action_server_names_and_types_by_node
 
 from test_msgs.action import Fibonacci
 

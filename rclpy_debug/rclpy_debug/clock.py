@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 from .duration import Duration
 from .exceptions import NotInitializedException

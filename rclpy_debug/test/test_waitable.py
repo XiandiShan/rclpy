@@ -17,16 +17,16 @@ import time
 import unittest
 
 import rclpy_debug
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
-from rclpy.clock import Clock
-from rclpy.clock import ClockType
-from rclpy.executors import SingleThreadedExecutor
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.qos import QoSProfile
-from rclpy.task import Future
-from rclpy.type_support import check_for_type_support
-from rclpy.waitable import NumberOfEntities
-from rclpy.waitable import Waitable
+from rclpy_debug.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
+from rclpy_debug.clock import Clock
+from rclpy_debug.clock import ClockType
+from rclpy_debug.executors import SingleThreadedExecutor
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.task import Future
+from rclpy_debug.type_support import check_for_type_support
+from rclpy_debug.waitable import NumberOfEntities
+from rclpy_debug.waitable import Waitable
 
 from test_msgs.msg import Empty as EmptyMsg
 from test_msgs.srv import Empty as EmptySrv

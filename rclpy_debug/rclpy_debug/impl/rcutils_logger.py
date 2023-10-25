@@ -18,9 +18,9 @@ from collections import OrderedDict
 import inspect
 import os
 
-from rclpy.clock import Clock
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.impl.logging_severity import LoggingSeverity
+from rclpy_debug.clock import Clock
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.impl.logging_severity import LoggingSeverity
 
 # Known filenames from which logging methods can be called (will be ignored in `_find_caller`).
 _internal_callers = []
@@ -35,7 +35,7 @@ def _find_caller(frame):
     if _populate_internal_callers:
         # Populate the list of internal filenames from which logging methods can be called.
         # This has to be done from within a function to avoid cyclic module imports.
-        import rclpy.logging
+        import rclpy_debug.logging
         # Extend the list to preserve any filenames that may have been added by third parties.
         # Note: the call to `realpath` will also resolve mixed slashes that can result on Windows.
         _internal_callers.extend([

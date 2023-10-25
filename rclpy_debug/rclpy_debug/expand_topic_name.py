@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 def expand_topic_name(topic_name, node_name, node_namespace):

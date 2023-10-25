@@ -17,10 +17,10 @@ import unittest
 
 from rcl_interfaces.srv import GetParameters
 import rclpy_debug
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
-from rclpy.callback_groups import ReentrantCallbackGroup
-from rclpy.executors import MultiThreadedExecutor
-from rclpy.task import Future
+from rclpy_debug.callback_groups import MutuallyExclusiveCallbackGroup
+from rclpy_debug.callback_groups import ReentrantCallbackGroup
+from rclpy_debug.executors import MultiThreadedExecutor
+from rclpy_debug.task import Future
 from test_msgs.msg import BasicTypes, Empty
 
 

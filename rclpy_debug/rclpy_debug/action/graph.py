@@ -15,7 +15,7 @@
 from typing import List
 from typing import Tuple
 
-from rclpy.node import Node
+from rclpy_debug.node import Node
 
 
 def get_action_client_names_and_types_by_node(

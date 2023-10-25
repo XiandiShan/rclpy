@@ -19,14 +19,14 @@ import traceback
 
 from action_msgs.msg import GoalInfo, GoalStatus
 
-from rclpy.executors import await_or_execute
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.qos import qos_profile_action_status_default
-from rclpy.qos import qos_profile_services_default
-from rclpy.qos import QoSProfile
-from rclpy.task import Future
-from rclpy.type_support import check_for_type_support
-from rclpy.waitable import NumberOfEntities, Waitable
+from rclpy_debug.executors import await_or_execute
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.qos import qos_profile_action_status_default
+from rclpy_debug.qos import qos_profile_services_default
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.task import Future
+from rclpy_debug.type_support import check_for_type_support
+from rclpy_debug.waitable import NumberOfEntities, Waitable
 
 # Re-export exception defined in _rclpy C extension.
 RCLError = _rclpy.RCLError

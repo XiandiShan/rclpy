@@ -14,8 +14,8 @@
 
 import pytest
 
-from rclpy.serialization import deserialize_message
-from rclpy.serialization import serialize_message
+from rclpy_debug.serialization import deserialize_message
+from rclpy_debug.serialization import serialize_message
 
 from test_msgs.message_fixtures import get_test_msg
 from test_msgs.msg import Arrays

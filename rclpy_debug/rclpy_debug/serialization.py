@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.type_support import check_for_type_support
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.type_support import check_for_type_support
 
 
 def serialize_message(message) -> bytes:

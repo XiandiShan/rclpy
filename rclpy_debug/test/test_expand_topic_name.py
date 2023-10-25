@@ -14,7 +14,7 @@
 
 import unittest
 
-from rclpy.expand_topic_name import expand_topic_name
+from rclpy_debug.expand_topic_name import expand_topic_name
 
 
 class TestExpandTopicName(unittest.TestCase):

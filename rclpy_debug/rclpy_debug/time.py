@@ -13,8 +13,8 @@
 # limitations under the License.
 
 import builtin_interfaces.msg
-from rclpy.duration import Duration
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.duration import Duration
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 CONVERSION_CONSTANT = 10 ** 9

@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.exceptions import InvalidHandle
-from rclpy.guard_condition import GuardCondition
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.exceptions import InvalidHandle
+from rclpy_debug.guard_condition import GuardCondition
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 # re-export SignalHandlerOptions enum

@@ -14,8 +14,8 @@
 
 import unittest
 
-from rclpy.exceptions import InvalidNamespaceException
-from rclpy.validate_namespace import validate_namespace
+from rclpy_debug.exceptions import InvalidNamespaceException
+from rclpy_debug.validate_namespace import validate_namespace
 
 
 class TestValidateNamespace(unittest.TestCase):

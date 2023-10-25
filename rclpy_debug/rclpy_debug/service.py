@@ -15,9 +15,9 @@
 from typing import Callable
 from typing import TypeVar
 
-from rclpy.callback_groups import CallbackGroup
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.qos import QoSProfile
+from rclpy_debug.callback_groups import CallbackGroup
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.qos import QoSProfile
 
 # Used for documentation purposes only
 SrvType = TypeVar('SrvType')

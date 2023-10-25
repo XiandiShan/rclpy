@@ -14,9 +14,9 @@
 
 import unittest
 
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.qos import QoSProfile
-from rclpy.topic_endpoint_info import TopicEndpointInfo, TopicEndpointTypeEnum
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.topic_endpoint_info import TopicEndpointInfo, TopicEndpointTypeEnum
 
 
 class TestQosProfile(unittest.TestCase):

@@ -17,10 +17,10 @@ import unittest
 import uuid
 
 import rclpy_debug
-from rclpy.action import ActionClient
-from rclpy.callback_groups import ReentrantCallbackGroup
-from rclpy.executors import MultiThreadedExecutor, SingleThreadedExecutor
-from rclpy.qos import qos_profile_action_status_default
+from rclpy_debug.action import ActionClient
+from rclpy_debug.callback_groups import ReentrantCallbackGroup
+from rclpy_debug.executors import MultiThreadedExecutor, SingleThreadedExecutor
+from rclpy_debug.qos import qos_profile_action_status_default
 
 from test_msgs.action import Fibonacci
 

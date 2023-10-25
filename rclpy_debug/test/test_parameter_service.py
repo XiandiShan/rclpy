@@ -18,10 +18,10 @@ from rcl_interfaces.msg import ParameterType
 from rcl_interfaces.srv import DescribeParameters
 from rcl_interfaces.srv import GetParameters
 import rclpy_debug
-import rclpy.context
-from rclpy.executors import SingleThreadedExecutor
-from rclpy.parameter import Parameter
-from rclpy.qos import qos_profile_services_default
+import rclpy_debug.context
+from rclpy_debug.executors import SingleThreadedExecutor
+from rclpy_debug.parameter import Parameter
+from rclpy_debug.qos import qos_profile_services_default
 
 
 class TestParameterService(unittest.TestCase):

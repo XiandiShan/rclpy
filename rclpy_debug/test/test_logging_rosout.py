@@ -18,8 +18,8 @@ import pytest
 
 from rcl_interfaces.msg import Log
 import rclpy_debug
-from rclpy.executors import SingleThreadedExecutor
-from rclpy.logging import LoggingSeverity
+from rclpy_debug.executors import SingleThreadedExecutor
+from rclpy_debug.logging import LoggingSeverity
 
 TEST_PARAMETERS = [
     # name, enable_global_rosout_logs, enable_node_rosout, expected_data

@@ -18,8 +18,8 @@ from typing import Union
 
 import warnings
 
-from rclpy.duration import Duration
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.duration import Duration
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 class QoSPolicyKind(IntEnum):

@@ -17,10 +17,10 @@ import time
 import unittest
 
 import rclpy_debug
-from rclpy.callback_groups import ReentrantCallbackGroup
-from rclpy.executors import SingleThreadedExecutor
-from rclpy.waitable import NumberOfEntities
-from rclpy.waitable import Waitable
+from rclpy_debug.callback_groups import ReentrantCallbackGroup
+from rclpy_debug.executors import SingleThreadedExecutor
+from rclpy_debug.waitable import NumberOfEntities
+from rclpy_debug.waitable import Waitable
 from test_msgs.msg import BasicTypes
 from test_msgs.srv import BasicTypes as BasicTypesSrv
 

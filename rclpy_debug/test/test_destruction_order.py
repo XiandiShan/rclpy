@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import rclpy_debug
-from rclpy.node import Node
+from rclpy_debug.node import Node
 
 
 def test_destruction_order():

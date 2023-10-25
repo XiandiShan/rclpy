@@ -44,22 +44,22 @@ from typing import List
 from typing import Optional
 from typing import TYPE_CHECKING
 
-from rclpy.context import Context
-from rclpy.parameter import Parameter
-from rclpy.signals import install_signal_handlers
-from rclpy.signals import SignalHandlerOptions
-from rclpy.signals import uninstall_signal_handlers
-from rclpy.task import Future
-from rclpy.utilities import get_default_context
-from rclpy.utilities import get_rmw_implementation_identifier  # noqa: F401
-from rclpy.utilities import ok  # noqa: F401 forwarding to this module
-from rclpy.utilities import shutdown as _shutdown
-from rclpy.utilities import try_shutdown  # noqa: F401
+from rclpy_debug.context import Context
+from rclpy_debug.parameter import Parameter
+from rclpy_debug.signals import install_signal_handlers
+from rclpy_debug.signals import SignalHandlerOptions
+from rclpy_debug.signals import uninstall_signal_handlers
+from rclpy_debug.task import Future
+from rclpy_debug.utilities import get_default_context
+from rclpy_debug.utilities import get_rmw_implementation_identifier  # noqa: F401
+from rclpy_debug.utilities import ok  # noqa: F401 forwarding to this module
+from rclpy_debug.utilities import shutdown as _shutdown
+from rclpy_debug.utilities import try_shutdown  # noqa: F401
 
 # Avoid loading extensions on module import
 if TYPE_CHECKING:
-    from rclpy.executors import Executor  # noqa: F401
-    from rclpy.node import Node  # noqa: F401
+    from rclpy_debug.executors import Executor  # noqa: F401
+    from rclpy_debug.node import Node  # noqa: F401
 
 
 def init(
@@ -98,7 +98,7 @@ def get_global_executor() -> 'Executor':
     global __executor
     if __executor is None:
         # imported locally to avoid loading extensions on module import
-        from rclpy.executors import SingleThreadedExecutor
+        from rclpy_debug.executors import SingleThreadedExecutor
         __executor = SingleThreadedExecutor()
         context = get_default_context()
 
@@ -168,7 +168,7 @@ def create_node(
     :return: An instance of the newly created node.
     """
     # imported locally to avoid loading extensions on module import
-    from rclpy.node import Node  # noqa: F811
+    from rclpy_debug.node import Node  # noqa: F811
     return Node(
         node_name, context=context, cli_args=cli_args, namespace=namespace,
         use_global_arguments=use_global_arguments,

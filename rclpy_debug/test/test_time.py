@@ -14,10 +14,10 @@
 
 import unittest
 
-from rclpy.clock import ClockType
-from rclpy.duration import Duration
-from rclpy.duration import Infinite
-from rclpy.time import Time
+from rclpy_debug.clock import ClockType
+from rclpy_debug.duration import Duration
+from rclpy_debug.duration import Infinite
+from rclpy_debug.time import Time
 
 from test_msgs.msg import Builtins
 

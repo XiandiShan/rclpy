@@ -16,9 +16,9 @@ import unittest
 
 import rclpy_debug
 
-from rclpy.exceptions import InvalidNamespaceException
-from rclpy.exceptions import InvalidNodeNameException
-from rclpy.parameter import Parameter
+from rclpy_debug.exceptions import InvalidNamespaceException
+from rclpy_debug.exceptions import InvalidNodeNameException
+from rclpy_debug.parameter import Parameter
 
 
 class TestCreateNode(unittest.TestCase):

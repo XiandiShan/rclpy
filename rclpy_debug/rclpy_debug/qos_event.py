@@ -18,12 +18,12 @@ from typing import List
 from typing import Optional
 
 import rclpy_debug
-from rclpy.callback_groups import CallbackGroup
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.logging import get_logger
-from rclpy.qos import qos_policy_name_from_kind
-from rclpy.waitable import NumberOfEntities
-from rclpy.waitable import Waitable
+from rclpy_debug.callback_groups import CallbackGroup
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.logging import get_logger
+from rclpy_debug.qos import qos_policy_name_from_kind
+from rclpy_debug.waitable import NumberOfEntities
+from rclpy_debug.waitable import Waitable
 
 
 QoSPublisherEventType = _rclpy.rcl_publisher_event_type_t

@@ -33,25 +33,26 @@ from typing import TypeVar
 from typing import Union
 
 
-from rclpy.client import Client
-from rclpy.clock import Clock
-from rclpy.clock import ClockType
-from rclpy.context import Context
-from rclpy.exceptions import InvalidHandle
-from rclpy.guard_condition import GuardCondition
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.service import Service
-from rclpy.signals import SignalHandlerGuardCondition
-from rclpy.subscription import Subscription
-from rclpy.task import Future
-from rclpy.task import Task
-from rclpy.timer import Timer
-from rclpy.utilities import get_default_context
-from rclpy.utilities import timeout_sec_to_nsec
-from rclpy.waitable import NumberOfEntities
-from rclpy.waitable import Waitable
+from rclpy_debug.client import Client
+from rclpy_debug.clock import Clock
+from rclpy_debug.clock import ClockType
+from rclpy_debug.context import Context
+from rclpy_debug.exceptions import InvalidHandle
+from rclpy_debug.guard_condition import GuardCondition
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.service import Service
+from rclpy_debug.signals import SignalHandlerGuardCondition
+from rclpy_debug.subscription import Subscription
+from rclpy_debug.task import Future
+from rclpy_debug.task import Task
+from rclpy_debug.timer import Timer
+from rclpy_debug.utilities import get_default_context
+from rclpy_debug.utilities import timeout_sec_to_nsec
+from rclpy_debug.waitable import NumberOfEntities
+from rclpy_debug.waitable import Waitable
 
 from sample_node.time_profiler import TimeProfiler
+import objgraph
 
 # For documentation purposes
 # TODO(jacobperron): Make all entities implement the 'Waitable' interface for better type checking
@@ -59,7 +60,7 @@ WaitableEntityType = TypeVar('WaitableEntityType')
 
 # Avoid import cycle
 if TYPE_CHECKING:
-    from rclpy.node import Node  # noqa: F401
+    from rclpy_debug.node import Node  # noqa: F401
 
 class _WorkTracker:
     """Track the amount of work that is in progress."""
@@ -188,6 +189,7 @@ class Executor:
         """
         task = Task(callback, args, kwargs, executor=self)
         with self._tasks_lock:
+            print("append task at create.")
             self._tasks.append((task, None, None))
             self._guard.trigger()
         # Task inherits from Future
@@ -428,6 +430,7 @@ class Executor:
             handler, (entity, self._guard, self._is_shutdown, self._work_tracker),
             executor=self)
         with self._tasks_lock:
+            print("append task at make handler.")
             self._tasks.append((task, entity, node))
         return task
 
@@ -474,11 +477,14 @@ class Executor:
             tasks = None
             with self._tasks_lock:
                 tasks = list(self._tasks)
+            print("task length: {}".format(len(tasks)))
             if tasks:
                 for task, entity, node in reversed(tasks):
+                    print("check if task is executing: {}".format(task.executing()))
                     if (not task.executing() and not task.done() and
                             (node is None or node in nodes_to_use)):
                         yielded_work = True
+                        print("yield here for task.")
                         yield task, entity, node
                 with self._tasks_lock:
                     # Get rid of any tasks that are done
@@ -615,6 +621,7 @@ class Executor:
                                 handler = self._make_handler(
                                     wt, node, lambda e: e.take_data(), self._execute_waitable)
                                 yielded_work = True
+                                print("yield here for waitable.")
                                 yield handler, wt, node
 
             # Process ready entities one node at a time
@@ -627,6 +634,7 @@ class Executor:
                                 handler = self._make_handler(
                                     tmr, node, self._take_timer, self._execute_timer)
                                 yielded_work = True
+                                print("yield here for timer.")
                                 yield handler, tmr, node
 
                 for sub in node.subscriptions:
@@ -761,11 +769,13 @@ class MultiThreadedExecutor(Executor):
         else:
             self._executor.submit(handler)
             self._futures.append(handler)
-            self.time_profiler.record("future_length", len(self._futures))
-            for future in self._futures:  # check for any exceptions
+            # for future in self._futures:  # check for any exceptions
+            for future in self._futures[:]:
                 if future.done():
                     self._futures.remove(future)
                     future.result()
+            print("future length: {}".format(str(len(self._futures))))
+            
 
     def spin_once(self, timeout_sec: float = None) -> None:
         self._spin_once_impl(timeout_sec)

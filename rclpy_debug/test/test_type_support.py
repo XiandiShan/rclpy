@@ -15,7 +15,7 @@
 import pytest
 
 from rclpy_debug import type_support
-from rclpy.exceptions import NoTypeSupportImportedException
+from rclpy_debug.exceptions import NoTypeSupportImportedException
 
 from test_msgs.msg import Strings
 from test_msgs.srv import Empty

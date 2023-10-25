@@ -15,9 +15,9 @@
 
 from pathlib import Path
 
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.impl.logging_severity import LoggingSeverity
-import rclpy.impl.rcutils_logger
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.impl.logging_severity import LoggingSeverity
+import rclpy_debug.impl.rcutils_logger
 
 
 _root_logger = rclpy_debug.impl.rcutils_logger.RcutilsLogger()

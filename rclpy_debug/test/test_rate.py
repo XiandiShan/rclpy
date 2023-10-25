@@ -17,8 +17,8 @@ import time
 
 import pytest
 import rclpy_debug
-from rclpy.exceptions import ROSInterruptException
-from rclpy.executors import SingleThreadedExecutor
+from rclpy_debug.exceptions import ROSInterruptException
+from rclpy_debug.executors import SingleThreadedExecutor
 
 # Hz
 FREQ = 10.0

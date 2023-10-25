@@ -19,16 +19,16 @@ from unittest.mock import Mock
 
 import pytest
 import rclpy_debug
-from rclpy.clock import Clock
-from rclpy.clock import ClockType
-from rclpy.clock import JumpHandle
-from rclpy.clock import JumpThreshold
-from rclpy.clock import ROSClock
-from rclpy.context import Context
-from rclpy.duration import Duration
-from rclpy.exceptions import NotInitializedException
-from rclpy.time import Time
-from rclpy.utilities import get_default_context
+from rclpy_debug.clock import Clock
+from rclpy_debug.clock import ClockType
+from rclpy_debug.clock import JumpHandle
+from rclpy_debug.clock import JumpThreshold
+from rclpy_debug.clock import ROSClock
+from rclpy_debug.context import Context
+from rclpy_debug.duration import Duration
+from rclpy_debug.exceptions import NotInitializedException
+from rclpy_debug.time import Time
+from rclpy_debug.utilities import get_default_context
 
 from .mock_compat import __name__ as _  # noqa: ignore=F401
 

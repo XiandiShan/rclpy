@@ -21,12 +21,12 @@ import lifecycle_msgs.srv
 import pytest
 
 import rclpy_debug
-from rclpy.executors import SingleThreadedExecutor
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.lifecycle import LifecycleNode
-from rclpy.lifecycle import TransitionCallbackReturn
-from rclpy.node import Node
-from rclpy.publisher import Publisher
+from rclpy_debug.executors import SingleThreadedExecutor
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.lifecycle import LifecycleNode
+from rclpy_debug.lifecycle import TransitionCallbackReturn
+from rclpy_debug.node import Node
+from rclpy_debug.publisher import Publisher
 
 from test_msgs.msg import BasicTypes
 

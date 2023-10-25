@@ -20,8 +20,8 @@ import pytest
 from rcl_interfaces.msg import Parameter as ParameterMsg
 from rcl_interfaces.msg import ParameterType
 from rcl_interfaces.msg import ParameterValue
-from rclpy.parameter import Parameter
-from rclpy.parameter import parameter_value_to_python
+from rclpy_debug.parameter import Parameter
+from rclpy_debug.parameter import parameter_value_to_python
 
 
 class TestParameter(unittest.TestCase):

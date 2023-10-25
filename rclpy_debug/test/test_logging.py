@@ -19,10 +19,10 @@ import time
 import unittest
 
 import rclpy_debug
-from rclpy.clock import Clock, ROSClock
-from rclpy.logging import LoggingSeverity
-from rclpy.time import Time
-from rclpy.time_source import TimeSource
+from rclpy_debug.clock import Clock, ROSClock
+from rclpy_debug.logging import LoggingSeverity
+from rclpy_debug.time import Time
+from rclpy_debug.time_source import TimeSource
 
 
 class TestLogging(unittest.TestCase):

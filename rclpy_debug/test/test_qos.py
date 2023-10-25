@@ -14,17 +14,17 @@
 
 import unittest
 
-from rclpy.duration import Duration
-from rclpy.qos import InvalidQoSProfileException
-from rclpy.qos import qos_check_compatible
-from rclpy.qos import qos_profile_system_default
-from rclpy.qos import QoSCompatibility
-from rclpy.qos import QoSDurabilityPolicy
-from rclpy.qos import QoSHistoryPolicy
-from rclpy.qos import QoSLivelinessPolicy
-from rclpy.qos import QoSPresetProfiles
-from rclpy.qos import QoSProfile
-from rclpy.qos import QoSReliabilityPolicy
+from rclpy_debug.duration import Duration
+from rclpy_debug.qos import InvalidQoSProfileException
+from rclpy_debug.qos import qos_check_compatible
+from rclpy_debug.qos import qos_profile_system_default
+from rclpy_debug.qos import QoSCompatibility
+from rclpy_debug.qos import QoSDurabilityPolicy
+from rclpy_debug.qos import QoSHistoryPolicy
+from rclpy_debug.qos import QoSLivelinessPolicy
+from rclpy_debug.qos import QoSPresetProfiles
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.qos import QoSReliabilityPolicy
 
 
 class TestQosProfile(unittest.TestCase):

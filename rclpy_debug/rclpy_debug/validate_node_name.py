@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.exceptions import InvalidNodeNameException
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.exceptions import InvalidNodeNameException
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
 
 def validate_node_name(node_name):

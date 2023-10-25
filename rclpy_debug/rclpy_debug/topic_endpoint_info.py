@@ -14,7 +14,7 @@
 
 from enum import IntEnum
 
-from rclpy.qos import QoSHistoryPolicy, QoSPresetProfiles, QoSProfile
+from rclpy_debug.qos import QoSHistoryPolicy, QoSPresetProfiles, QoSProfile
 
 
 class TopicEndpointTypeEnum(IntEnum):

@@ -21,12 +21,12 @@ from typing import Set
 import lifecycle_msgs.msg
 import lifecycle_msgs.srv
 
-from rclpy.callback_groups import CallbackGroup
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.node import Node
-from rclpy.qos import QoSProfile
-from rclpy.service import Service
-from rclpy.type_support import check_is_valid_srv_type
+from rclpy_debug.callback_groups import CallbackGroup
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.node import Node
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.service import Service
+from rclpy_debug.type_support import check_is_valid_srv_type
 
 from .managed_entity import ManagedEntity
 from .publisher import LifecyclePublisher

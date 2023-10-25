@@ -15,7 +15,7 @@
 import pytest
 
 import rclpy_debug
-from rclpy.node import Node
+from rclpy_debug.node import Node
 
 from test_msgs.msg import Empty
 

@@ -14,12 +14,12 @@
 
 from typing import TypeVar, Union
 
-from rclpy.callback_groups import CallbackGroup
-from rclpy.duration import Duration
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.qos import QoSProfile
-from rclpy.qos_event import PublisherEventCallbacks
-from rclpy.qos_event import QoSEventHandler
+from rclpy_debug.callback_groups import CallbackGroup
+from rclpy_debug.duration import Duration
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.qos_event import PublisherEventCallbacks
+from rclpy_debug.qos_event import QoSEventHandler
 
 MsgType = TypeVar('MsgType')
 

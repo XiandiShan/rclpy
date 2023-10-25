@@ -14,7 +14,7 @@
 
 import unittest
 
-from rclpy.topic_or_service_is_hidden import topic_or_service_is_hidden
+from rclpy_debug.topic_or_service_is_hidden import topic_or_service_is_hidden
 
 
 class TestTopicOrServiceIsHidden(unittest.TestCase):

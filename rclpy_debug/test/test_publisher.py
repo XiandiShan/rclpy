@@ -16,7 +16,7 @@ import time
 import unittest
 
 import rclpy_debug
-from rclpy.duration import Duration
+from rclpy_debug.duration import Duration
 
 from test_msgs.msg import BasicTypes
 

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.context import Context
+from rclpy_debug.context import Context
 
 
 def test_on_shutdown_method():

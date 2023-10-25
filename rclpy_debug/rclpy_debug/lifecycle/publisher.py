@@ -14,8 +14,8 @@
 
 from typing import Union
 
-from rclpy.publisher import MsgType
-from rclpy.publisher import Publisher
+from rclpy_debug.publisher import MsgType
+from rclpy_debug.publisher import Publisher
 
 from .managed_entity import SimpleManagedEntity
 

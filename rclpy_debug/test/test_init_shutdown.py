@@ -15,8 +15,8 @@
 import pytest
 import rclpy_debug
 from rclpy_debug import signals
-from rclpy.exceptions import NotInitializedException
-from rclpy.signals import SignalHandlerOptions
+from rclpy_debug.exceptions import NotInitializedException
+from rclpy_debug.signals import SignalHandlerOptions
 
 
 def test_init():
@@ -26,7 +26,7 @@ def test_init():
 
 
 def test_init_with_unknown_ros_args():
-    from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+    from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
 
     context = rclpy_debug.context.Context()
     unknown_ros_args_error_pattern = r'\[\'unknown\'\]'

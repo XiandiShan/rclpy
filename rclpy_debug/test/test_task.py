@@ -15,8 +15,8 @@
 import asyncio
 import unittest
 
-from rclpy.task import Future
-from rclpy.task import Task
+from rclpy_debug.task import Future
+from rclpy_debug.task import Task
 
 
 class DummyExecutor:

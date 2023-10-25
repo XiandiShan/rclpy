@@ -15,21 +15,21 @@
 import pytest
 
 import rclpy_debug
-from rclpy.duration import Duration
-from rclpy.node import Node
-from rclpy.parameter import Parameter
-from rclpy.publisher import Publisher
-from rclpy.qos import QoSDurabilityPolicy
-from rclpy.qos import QoSHistoryPolicy
-from rclpy.qos import QoSLivelinessPolicy
-from rclpy.qos import QoSProfile
-from rclpy.qos import QoSReliabilityPolicy
-from rclpy.qos_overriding_options import _declare_qos_parameters
-from rclpy.qos_overriding_options import _get_qos_policy_parameter
-from rclpy.qos_overriding_options import InvalidQosOverridesError
-from rclpy.qos_overriding_options import QosCallbackResult
-from rclpy.qos_overriding_options import QoSOverridingOptions
-from rclpy.qos_overriding_options import QoSPolicyKind
+from rclpy_debug.duration import Duration
+from rclpy_debug.node import Node
+from rclpy_debug.parameter import Parameter
+from rclpy_debug.publisher import Publisher
+from rclpy_debug.qos import QoSDurabilityPolicy
+from rclpy_debug.qos import QoSHistoryPolicy
+from rclpy_debug.qos import QoSLivelinessPolicy
+from rclpy_debug.qos import QoSProfile
+from rclpy_debug.qos import QoSReliabilityPolicy
+from rclpy_debug.qos_overriding_options import _declare_qos_parameters
+from rclpy_debug.qos_overriding_options import _get_qos_policy_parameter
+from rclpy_debug.qos_overriding_options import InvalidQosOverridesError
+from rclpy_debug.qos_overriding_options import QosCallbackResult
+from rclpy_debug.qos_overriding_options import QoSOverridingOptions
+from rclpy_debug.qos_overriding_options import QoSPolicyKind
 
 
 @pytest.fixture(autouse=True)

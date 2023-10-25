@@ -14,9 +14,9 @@
 
 import threading
 
-from rclpy.exceptions import InvalidHandle, ROSInterruptException
-from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
-from rclpy.utilities import get_default_context
+from rclpy_debug.exceptions import InvalidHandle, ROSInterruptException
+from rclpy_debug.impl.implementation_singleton import rclpy_implementation as _rclpy
+from rclpy_debug.utilities import get_default_context
 
 
 class Timer:

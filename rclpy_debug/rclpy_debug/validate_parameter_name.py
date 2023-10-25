@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from rclpy.exceptions import InvalidParameterException
+from rclpy_debug.exceptions import InvalidParameterException
 
 
 def validate_parameter_name(name: str) -> bool:

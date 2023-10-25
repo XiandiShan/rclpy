@@ -18,10 +18,10 @@ import time
 import unittest
 
 import rclpy_debug
-from rclpy.executors import MultiThreadedExecutor
-from rclpy.executors import ShutdownException
-from rclpy.executors import SingleThreadedExecutor
-from rclpy.task import Future
+from rclpy_debug.executors import MultiThreadedExecutor
+from rclpy_debug.executors import ShutdownException
+from rclpy_debug.executors import SingleThreadedExecutor
+from rclpy_debug.task import Future
 
 
 class TestExecutor(unittest.TestCase):

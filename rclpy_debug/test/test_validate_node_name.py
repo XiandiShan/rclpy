@@ -14,8 +14,8 @@
 
 import unittest
 
-from rclpy.exceptions import InvalidNodeNameException
-from rclpy.validate_node_name import validate_node_name
+from rclpy_debug.exceptions import InvalidNodeNameException
+from rclpy_debug.validate_node_name import validate_node_name
 
 
 class TestValidateNodeName(unittest.TestCase):
